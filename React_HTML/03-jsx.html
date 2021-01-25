@@ -1,0 +1,17 @@
+<body>
+  <div id="root"></div>
+  <div id="test"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    let selection = document.getElementById("root");
+    let element = <div>Hello World!</div>;
+    ReactDOM.render(element, selection);
+    //console.log(typeof(selection))
+
+    let selectionOne = document.getElementById("test");
+    let elementOne = <div> "Today is a great day!"</div>;
+    ReactDOM.render(elementOne, selectionOne);
+  </script>
+</body>
