@@ -4,28 +4,16 @@
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
-    // const element = (
-    //   <>
-    //     <span><strong>Hello</strong></span> <span>World</span>
-    //   </>
-    // )
+    let Message = ({children}) => {
+      return <div className="message">{children}</div>
+    }
 
     const element = (
-      <>
-        <span>Hello </span> <span>Yuri</span>
-        <div>
-          <table>
-            <th>
-              Test
-            </th>
-            <tr>
-              One
-            </tr>
-          </table>
-        </div>
-      </>
-    );
-
+      <div className="container">
+        <Message>Hello World</Message>
+        <Message><strong>Goodbye World,</strong></Message>
+      </div>
+    )
 
     ReactDOM.render(element, document.getElementById('root'))
   </script>
