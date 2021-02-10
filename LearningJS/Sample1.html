@@ -1,26 +1,90 @@
 <!DOCTYPE html>
+
 <body>
 
-<script>
+	<script>
 
-// console.log("test")
+		// console.log("test")
 
-// function foo(a) {
-// 	console.log( a ); // 2
-// }
+		// function foo(a) {
+		// 	console.log( a ); // 2
+		// }
 
-// foo( 2 );
+		// foo( 2 );
 
-function foo(a) {
-	console.log( a + b );
-}
+		// function foo(a) {
+		// 	console.log(a + b);
+		// }
 
-var b = 2;
+		// var b = 2;
 
-foo( 2 ); // 4
+		// foo(2); // 4
 
 
-</script>
+
+		// function foo(a) {
+
+		// 	var b = a * 2;
+
+		// 	function bar(c) {
+		// 		console.log(a, b, c);
+		// 	}
+
+		// 	bar(b * 3);
+		// }
+
+		// // foo(2); // 2 4 12
+
+		//Function Declarations
+		// let foo = (a) =>{
+		// 	let b = 2;
+
+		// 	let bar = ()=>{
+
+		// 	}
+		// 	let c = 3;
+
+		// }
+
+
+
+		//IIFE Functions
+		let a = 3;
+		(FB = (a) => {
+			if (a % 2 == 0) {
+				console.log("Fizz");
+			}
+			else if (a % 3 == 0) {
+				console.log("Buzz");
+			}
+			else {
+				console.log("Fizz Buzz");
+			}
+		})();
+
+		//Global Scope with Variable / enclosing scope with let or var
+		// let test = "Yuri";
+		// if (test) {
+		// 	variable = "Potawsky";
+		// 	console.log(variable);
+		// }
+
+		// console.log(variable);
+
+		// for (var i = 0; i < 10; i++) {
+		// 	console.log(i);
+		// }
+
+		try{
+			let a =2;
+		}
+
+		catch(err){
+			console.log(err);
+		}
+
+
+	</script>
 
 
 
@@ -29,4 +93,5 @@ foo( 2 ); // 4
 
 
 </body>
+
 </html>
