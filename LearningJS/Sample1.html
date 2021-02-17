@@ -2,8 +2,17 @@
 
 <body>
 
+
+
+	<p id="p1">Hello World!</p>
+
 	<script>
 
+		var selector = document.getElementById("p1");
+		var test = "Hello";
+		selector.innerHTML= test;
+		console.log("This is the first line \nand this is the second");
+		console.log("A newline character is written like \"\\n\".")
 		// console.log("test")
 
 		// function foo(a) {
@@ -48,19 +57,19 @@
 
 
 
-		//IIFE Functions
-		let a = 3;
-		(FB = (a) => {
-			if (a % 2 == 0) {
-				console.log("Fizz");
-			}
-			else if (a % 3 == 0) {
-				console.log("Buzz");
-			}
-			else {
-				console.log("Fizz Buzz");
-			}
-		})();
+		// //IIFE Functions
+		// let a = 3;
+		// (FB = (a) => {
+		// 	if (a % 2 == 0) {
+		// 		console.log("Fizz");
+		// 	}
+		// 	else if (a % 3 == 0) {
+		// 		console.log("Buzz");
+		// 	}
+		// 	else {
+		// 		console.log("Fizz Buzz");
+		// 	}
+		// })();
 
 		//Global Scope with Variable / enclosing scope with let or var
 		// let test = "Yuri";
@@ -97,22 +106,41 @@
 		// console.log( bar );
 
 
-		function process(data) {
-			// do something interesting
-		}
+		// function process(data) {
+		// 	// do something interesting
+		// }
 
-		// anything declared inside this block can go away after!
-		{
-			let someReallyBigData = {  };
+		// // anything declared inside this block can go away after!
+		// {
+		// 	let someReallyBigData = {  };
 
-			process(someReallyBigData);
-		}
+		// 	process(someReallyBigData);
+		// }
 
-		var btn = document.getElementById("my_button");
+		// var btn = document.getElementById("my_button");
 
-		btn.addEventListener("click", function click(evt) {
-			console.log("button clicked");
-		}, /*capturingPhase=*/false);
+		// btn.addEventListener("click", function click(evt) {
+		// 	console.log("button clicked");
+		// }, /*capturingPhase=*/false);
+
+
+		//Hoisting - Function declarations first then variables	
+		foo(); // 1
+
+		// var foo;
+
+		// function foo() {
+		// 	console.log(1);
+		// }
+
+		// foo = function () {
+		// 	console.log(2);
+		// };
+
+		// var selector = document.getElementById("test");
+		// var test = "Hello";
+
+		// selector.innerHTML = "testd";
 
 
 
