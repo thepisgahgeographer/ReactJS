@@ -8,14 +8,27 @@
 
 	<script>
 
-		var selector = document.getElementById("p1");
-		var test = "Hello";
-		selector.innerHTML = test;
+		// var selector = document.getElementById("p1");
+		// var test = "Hello";
+		// selector.innerHTML = test;
 
 
-		for(var counter = "#"; counter.length<8; counter+="#"){
-			console.log(counter);
+		// for(var counter = "#"; counter.length<8; counter+="#"){
+		// 	console.log(counter);
+		// }
+
+
+		function wrapValue(n) {
+			let local = n;
+			return () => local;
 		}
+
+		let wrap1 = wrapValue(1);
+		let wrap2 = wrapValue(2);
+		console.log(wrap1());
+		
+		console.log(wrap2());
+
 
 		// var range = [1,2,3,4];
 		// for(r in range){
