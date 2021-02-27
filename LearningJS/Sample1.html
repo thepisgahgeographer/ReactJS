@@ -8,26 +8,93 @@
 
 	<script>
 
-		// var selector = document.getElementById("p1");
-		// var test = "Hello";
-		// selector.innerHTML = test;
+		// function min(a,b){
+		// 	if (a<b){
+		// 		console.log(a);
+		// 	}
+		// 	else if(a>b){
+		// 		console.log(b);
+		// 	}
 
-
-		// for(var counter = "#"; counter.length<8; counter+="#"){
-		// 	console.log(counter);
 		// }
 
+		// min(10,15);
 
-		function wrapValue(n) {
-			let local = n;
-			return () => local;
+		// mins = (a,b)=>{
+		// 	if(a<b){
+		// 		console.log(a);
+		// 	}
+		// 	else(console.log(b))
+		
+		// }
+		// mins(12, 11);
+
+
+		// isEven = (pos)=>{
+		// 	if(pos%2 == 0){
+		// 		console.log("Even");
+		// 	}
+		// 	else(console.log("Odd"));
+
+		// }
+
+		// isEven(0);
+
+		
+		var countChar = (str, char)=>{
+			counts = 0;
+			for(rec=0; rec<str.length; rec++){
+				if(str[rec] == char){
+					counts+=1;
+				}
+			}
+			console.log(counts);
 		}
 
-		let wrap1 = wrapValue(1);
-		let wrap2 = wrapValue(2);
-		console.log(wrap1());
+		countChar("sassafras", "s");
+
+
 		
-		console.log(wrap2());
+		// var selector = document.getElementById("p1");
+		// // var test = "Hello";
+		// // selector.innerHTML = test;
+
+
+		// // for(var counter = "#"; counter.length<8; counter+="#"){
+		// // 	console.log(counter);
+		// // }
+
+
+		// // function wrapValue(n) {
+		// // 	let local = n;
+		// // 	return () => local;
+		// // }
+
+		// // let wrap1 = wrapValue(1);
+		// // let wrap2 = wrapValue(2);
+		// // console.log(wrap1());
+
+		// // console.log(wrap2());
+
+		// // let testing = function () {
+		// // 	console.log("test")
+		// // }
+		// // testing();
+
+		// function printFarmInventory(cows, chickens) {
+		// 	let cowString = String(cows);
+		// 	while (cowString.length < 3) {
+		// 		cowString = "0" + cowString;
+		// 	}
+		// 	console.log(`${cowString} Cows`);
+		// 	let chickenString = String(chickens);
+		// 	while (chickenString.length < 3) {
+		// 		chickenString = "0" + chickenString;
+		// 	}
+		// 	console.log(`${chickenString} Chickens`);
+		// }
+		// printFarmInventory(7, 11);
+
 
 
 		// var range = [1,2,3,4];
