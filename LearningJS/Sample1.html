@@ -25,7 +25,7 @@
 		// 		console.log(a);
 		// 	}
 		// 	else(console.log(b))
-		
+
 		// }
 		// mins(12, 11);
 
@@ -40,12 +40,12 @@
 
 		// isEven(0);
 
-		
-		var countChar = (str, char)=>{
+
+		var countChar = (str, char) => {
 			counts = 0;
-			for(rec=0; rec<str.length; rec++){
-				if(str[rec] == char){
-					counts+=1;
+			for (rec = 0; rec < str.length; rec++) {
+				if (str[rec] == char) {
+					counts += 1;
 				}
 			}
 			console.log(counts);
@@ -54,7 +54,20 @@
 		countChar("sassafras", "s");
 
 
-		
+		var ary = ["The", "Brushy", "Mountains"];
+		var obj = {
+			rod: "CGR",
+			length: 6.5,
+			ary: ["South", "Mountains", "State", "Park"]
+		};
+
+		// obj.color = "red";
+		// console.log(obj);
+
+		console.log(obj.ary[2]);
+		console.log(typeof obj.ary);
+
+
 		// var selector = document.getElementById("p1");
 		// // var test = "Hello";
 		// // selector.innerHTML = test;
