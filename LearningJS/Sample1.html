@@ -41,25 +41,68 @@
 		// isEven(0);
 
 
-		var countChar = (str, char) => {
-			counts = 0;
-			for (rec = 0; rec < str.length; rec++) {
-				if (str[rec] == char) {
-					counts += 1;
-				}
+		// var countChar = (str, char) => {
+		// 	counts = 0;
+		// 	for (rec = 0; rec < str.length; rec++) {
+		// 		if (str[rec] == char) {
+		// 			counts += 1;
+		// 		}
+		// 	}
+		// 	console.log(counts);
+		// }
+
+		// countChar("sassafras", "s");
+
+
+		// var ary = ["The", "Brushy", "Mountains"];
+		// var obj = {
+		// 	rod: "CGR",
+		// 	length: 6.5,
+		// 	ary: ["South", "Mountains", "State", "Park"]
+		// };
+
+		// let range = (Start, End) =>{
+		// 	var test = [];
+		// 	for(let sentry = Start; sentry<=End; sentry++){
+		// 		test.push(sentry);
+		// 	}
+		// 	console.log(test);
+		// 	console.log(test.reverse());
+		// };
+
+		// range(1,10);
+
+		let arry = ["A", "B", "C", "D"];
+		let out = [];
+
+		for (i = arry.length - 1; i >= 0; i--) {
+			out.push(arry[i]);
+			console.log(arry[i]);
+		};
+
+		function arrayToList(array) {
+			let list = null;
+			for (let i = array.length - 1; i >= 0; i--) {
+				list = { value: array[i], rest: list };
 			}
-			console.log(counts);
+			return list;
 		}
 
-		countChar("sassafras", "s");
+		console.log(arrayToList([10, 20]));
+
+		
+		// let rangFunc = (Start, End) =>{
+		// 	let test = new Array(range(Start, End));
+		// 	for(let sentry of test){
+		// 		console.log(sentry);
+		// 	}
+
+		// };
+
+		// rangFunc(1,10);
 
 
-		var ary = ["The", "Brushy", "Mountains"];
-		var obj = {
-			rod: "CGR",
-			length: 6.5,
-			ary: ["South", "Mountains", "State", "Park"]
-		};
+
 
 		// //console.log(ary.slice(2));
 		// console.log(typeof obj.ary);
@@ -72,12 +115,16 @@
 		// 		.concat(array.slice(index + 1));
 		// }
 
-		var testAry = ["Cabelas", "CGR", "Six", "Foot"];
-		let testAryy = "TheBrushyMoutains";
-		console.log(testAryy[1]);
+		// var testAry = ["Cabelas", "CGR", "Six", "Foot"];
+		// let testAryy = "TheBrushyMoutains";
+		// //console.log(testAryy[1]);
 
-		let string = JSON.stringify({Slow: false,
-                             events: ["weekend"]});
+		// for(let a of testAry){
+		// 	console.log(a);
+		// }
+
+		// let string = JSON.stringify({Slow: false,
+        //                      events: ["weekend"]});
 
 		// var selector = document.getElementById("p1");
 		// // var test = "Hello";
