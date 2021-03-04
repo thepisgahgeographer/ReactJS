@@ -72,25 +72,45 @@
 
 		// range(1,10);
 
-		let arry = ["A", "B", "C", "D"];
-		let out = [];
+		// let count=0;
+		// while(count <10){
+		// 	count++;
+		// 	console.log(count);
+		// }
 
-		for (i = arry.length - 1; i >= 0; i--) {
-			out.push(arry[i]);
-			console.log(arry[i]);
-		};
-
-		function arrayToList(array) {
-			let list = null;
-			for (let i = array.length - 1; i >= 0; i--) {
-				list = { value: array[i], rest: list };
+		function filter(array, test) {
+			let passed = [];
+			for (let element of array) {
+				if (test(element)) {
+					passed.push(element);
+				}
 			}
-			return list;
+			return passed;
 		}
 
-		console.log(arrayToList([10, 20]));
-
+		filter([1,2,3,4], test);
 		
+
+
+		// let arry = ["A", "B", "C", "D"];
+		// let out = [];
+
+		// for (i = arry.length - 1; i >= 0; i--) {
+		// 	out.push(arry[i]);
+		// 	console.log(arry[i]);
+		// };
+
+		// function arrayToList(array) {
+		// 	let list = null;
+		// 	for (let i = array.length - 1; i >= 0; i--) {
+		// 		list = { value: array[i], rest: list };
+		// 	}
+		// 	return list;
+		// }
+
+		// console.log(arrayToList([10, 20]));
+
+
 		// let rangFunc = (Start, End) =>{
 		// 	let test = new Array(range(Start, End));
 		// 	for(let sentry of test){
