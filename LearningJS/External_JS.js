@@ -46,16 +46,21 @@ let elevation = 2200;
 //elevation += 100;
 ++elevation;
 
-console.log(elevation);
+// console.log(elevation);
+// console.log("" + 1 + 0);
+// console.log("" - 1 + 0);
+// console.log(true + false);
 
+a = 0;
+b = 1;
+console.log(1 == false);
 
-
-
-
-
-
-
-
+if (a==0) {
+    console.log("True");
+}
+else {
+    console.log("False");
+}
 
 
 
