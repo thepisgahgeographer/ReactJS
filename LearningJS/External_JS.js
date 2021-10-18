@@ -33,3 +33,33 @@ console.log(typeof(COLOR_RED));
 // alert(typeof value); // string
 
 console.log(15%6);
+
+
+
+let apples = "2";
+let oranges = "3";
+
+// both values converted to numbers before the binary plus
+console.log(( +apples + +oranges )); // 5
+
+let elevation = 2200;
+//elevation += 100;
+++elevation;
+
+console.log(elevation);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//X
