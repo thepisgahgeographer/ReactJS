@@ -51,16 +51,47 @@ let elevation = 2200;
 // console.log("" - 1 + 0);
 // console.log(true + false);
 
-a = 0;
-b = 1;
-console.log(1 == false);
+// a = 0;
+// b = 1;
+// console.log(1 == false);
+//
+// if (a==0) {
+//     console.log("True");
+// }
+// else {
+//     console.log("False");
+// }
 
-if (a==0) {
-    console.log("True");
+let hibritenMtn = 2211;
+
+//let result = (hibritenMtn > 2200) ? console.log("True"): console.log("False");
+
+
+// //let eleTest = (hibritenMtn<=2211) ? console.log("2211"): console.log("Wrong");
+// let test2 = console.log(null || undefined || 2000);
+// alert( 1 && 2 && null && 3 );
+
+// let i = 0;
+// do {
+//   alert( i );
+//   i++;
+// } while (i < 3);
+
+let test = 1;
+// do {
+//   console.log(test);
+//   test++;
+// } while (test <11);
+
+while(test <11){
+  console.log(test);
+  test++;
 }
-else {
-    console.log("False");
-}
+
+
+
+
+
 
 
 
