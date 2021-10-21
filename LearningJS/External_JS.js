@@ -77,16 +77,46 @@ let hibritenMtn = 2211;
 //   i++;
 // } while (i < 3);
 
-let test = 1;
-// do {
+// let test = 1;
+// // do {
+// //   console.log(test);
+// //   test++;
+// // } while (test <11);
+//
+// while(test <11){
 //   console.log(test);
 //   test++;
-// } while (test <11);
+// }
 
-while(test <11){
-  console.log(test);
-  test++;
+// let sum = 0;
+//
+// while (true) {
+//   let value = +prompt("Enter a number", '');
+//   if (!value) break; // (*)
+//   sum += value;
+// }
+// alert( 'Sum: ' + sum );
+//
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 == 0) continue;
+//   console.log(i);
+//   console.log("Hello");
+// };
+
+
+outer: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    let input = prompt(`Value at coords (${i},${j})`, '');
+    // if an empty string or canceled, then break out of both loops
+    if (!input) break outer; // (*)
+    // do something with the value...
+  }
 }
+alert('Done!');
+
+
+
+
 
 
 
