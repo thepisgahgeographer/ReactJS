@@ -102,20 +102,30 @@ let hibritenMtn = 2211;
 //   console.log(i);
 //   console.log("Hello");
 // };
+//
+//
+// outer: for (let i = 0; i < 3; i++) {
+//   for (let j = 0; j < 3; j++) {
+//     let input = prompt(`Value at coords (${i},${j})`, '');
+//     // if an empty string or canceled, then break out of both loops
+//     if (!input) break outer; // (*)
+//     // do something with the value...
+//   }
+// }
+// alert('Done!');
 
+// console.log(`Yuri is a great\nperson`);
+//
+// console.log(1 + 1 == 2 && 10 * 10 > 50);
 
-outer: for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-    let input = prompt(`Value at coords (${i},${j})`, '');
-    // if an empty string or canceled, then break out of both loops
-    if (!input) break outer; // (*)
-    // do something with the value...
-  }
-}
-alert('Done!');
+let hibriten = 2211;
+let hen = 1890;
 
+let final = (hen > hibriten)? console.log("True"): console.log("False");
 
-
+console.log("5" - 1);
+let result = "5" + 1;
+console.log(typeof result);
 
 
 
