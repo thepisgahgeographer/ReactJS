@@ -127,8 +127,17 @@ console.log("5" - 1);
 let result = "5" + 1;
 console.log(typeof result);
 
+console.log(`Hibriten mtn is ${hibriten}`);
+console.log("Hibriten Mountain is", hibriten);
 
 
+const value = ()=>{
+  for (var i = 1; i < 11; i++) {
+      console.log(i);
+  }
+};
+
+value();
 
 
 
