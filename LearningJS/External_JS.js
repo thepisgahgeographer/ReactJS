@@ -187,13 +187,23 @@ mountainRange.elevation = () =>{
 // console.log(typeof brushies);
 // console.log(window.screen.height);
 
-let test = (mountainRange.name == "Brushy Mountains") && (mountainRange.maxHeight<=2211)
-console.log(test);
+// let test = (mountainRange.name == "Brushy Mountains") && (mountainRange.maxHeight<=2211)
+// console.log(test);
+//
+// let mtnRange = ["Hibriten", "Hen", "Timbered Ridge"];
+// console.log(mtnRange.length);
+// console.log(mtnRange[2]);
 
-let mtnRange = ["Hibriten", "Hen", "Timbered Ridge"];
-console.log(mtnRange.length);
+let mountains ={
+  name(){
+    console.log("Hibriten Mtn");
+  },
+  height(){
+    console.log(2211);
+  }
+};
 
-
+console.log(mountains.name());
 
 
 
