@@ -194,7 +194,7 @@ mountainRange.elevation = () =>{
 // console.log(mtnRange.length);
 // console.log(mtnRange[2]);
 
-let mountains ={
+let mountains = {
   name(){
     console.log("Hibriten Mtn");
   },
@@ -204,6 +204,45 @@ let mountains ={
 };
 
 console.log(mountains.name());
+
+let arr = [ "1", "10", "100", "1000" ];
+for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+    // will run 3 times
+};
+
+
+
+
+class Page {
+    constructor(text) {
+        this.text = text;
+    }
+    print() {
+        console.log(this.text);
+    }
+}
+
+class Notebook {
+    constructor() {
+        this.pages = [];
+    }
+    addPage(text) {
+        var page = new Page(text);
+        this.pages.push(page);
+    }
+    print() {
+        for (let page of this.pages) {
+            page.print();
+        }
+    }
+}
+
+var mathNotes = new Notebook();
+mathNotes.addPage("Arithmetic: + - * / ...");
+mathNotes.addPage("Trigonometry: sin cos tan ...");
+
+mathNotes.print();
+// ..
 
 
 
