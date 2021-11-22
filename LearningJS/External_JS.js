@@ -210,40 +210,84 @@ for (let i = 0; i < arr.length && arr[i] < 500; i++) {
     // will run 3 times
 };
 
+//
+//
+//
+// class Page {
+//     constructor(text) {
+//         this.text = text;
+//     }
+//     print() {
+//         console.log(this.text);
+//     }
+// }
+//
+// class Notebook {
+//     constructor() {
+//         this.pages = [];
+//     }
+//     addPage(text) {
+//         var page = new Page(text);
+//         this.pages.push(page);
+//     }
+//     print() {
+//         for (let page of this.pages) {
+//             page.print();
+//         }
+//     }
+// }
+//
+// var mathNotes = new Notebook();
+// mathNotes.addPage("Arithmetic: + - * / ...");
+// mathNotes.addPage("Trigonometry: sin cos tan ...");
+//
+// mathNotes.print();
+// // ..
+//
+//
+//
+// class Publication {
+//     constructor(title,author,pubDate) {
+//         this.title = title;
+//         this.author = author;
+//         this.pubDate = pubDate;
+//     }
+//
+//     print() {
+//         console.log(`
+//             Title: ${ this.title }
+//             By: ${ this.author }
+//             ${ this.pubDate }
+//         `);
+//     }
+// }
 
+var mountainTops = [1850, 2011, 2211];
 
-
-class Page {
-    constructor(text) {
-        this.text = text;
-    }
-    print() {
-        console.log(this.text);
-    }
+for (val of mountainTops){
+  console.log(val);
 }
 
-class Notebook {
-    constructor() {
-        this.pages = [];
-    }
-    addPage(text) {
-        var page = new Page(text);
-        this.pages.push(page);
-    }
-    print() {
-        for (let page of this.pages) {
-            page.print();
-        }
-    }
+let mountainTopsTest = [...mountainTops];
+console.log(mountainTopsTest);
+
+let loopTest1 = "Brushy Mountains";
+//loopTest2 = [...loopTest1];
+for (val of loopTest1){
+  console.log(val);
 }
 
-var mathNotes = new Notebook();
-mathNotes.addPage("Arithmetic: + - * / ...");
-mathNotes.addPage("Trigonometry: sin cos tan ...");
 
-mathNotes.print();
-// ..
 
+var buttonNames = new Map();
+buttonNames.set(btn1,"Button 1");
+buttonNames.set(btn2,"Button 2");
+
+for (let [btn,btnName] of buttonNames) {
+    btn.addEventListener("click",function onClick(){
+        console.log(`Clicked ${ btnName }`);
+    });
+}
 
 
 
