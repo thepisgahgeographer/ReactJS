@@ -1,4 +1,4 @@
-// //alert("Hello Yuri")
+// //alert("Hello Yuri");
 //
 // let message = "Hello";
 // alert(message);
@@ -264,33 +264,185 @@ for (let i = 0; i < arr.length && arr[i] < 500; i++) {
 
 var mountainTops = [1850, 2011, 2211];
 
-for (val of mountainTops){
-  console.log(val);
+// for (val of mountainTops){
+//   console.log(val);
+// }
+
+for ([idx,val] of mountainTops.entries()){
+  console.log(idx, val);
 }
 
-let mountainTopsTest = [...mountainTops];
-console.log(mountainTopsTest);
-
-let loopTest1 = "Brushy Mountains";
-//loopTest2 = [...loopTest1];
-for (val of loopTest1){
-  console.log(val);
-}
-
-
-
-var buttonNames = new Map();
-buttonNames.set(btn1,"Button 1");
-buttonNames.set(btn2,"Button 2");
-
-for (let [btn,btnName] of buttonNames) {
-    btn.addEventListener("click",function onClick(){
-        console.log(`Clicked ${ btnName }`);
-    });
+for (vl of mountainTops.values()){
+  console.log(vl);
 }
 
 
+// let mountainTopsTest = [...mountainTops];
+// console.log(mountainTopsTest);
+//
+// let loopTest1 = "Brushy Mountains";
+// //loopTest2 = [...loopTest1];
+// for (val of loopTest1){
+//   console.log(val);
+// }
 
+
+
+// var buttonNames = new Map();
+// buttonNames.set(btn1,"Button 1");
+// buttonNames.set(btn2,"Button 2");
+//
+// for (let [btn,btnName] of buttonNames) {
+//     btn.addEventListener("click",function onClick(){
+//         console.log(`Clicked ${ btnName }`);
+//     });
+// }
+//
+// let loopTest3 = [ 10, 20, 30 ];
+// //
+// // for (let [idx,val] of arr.entries()) {
+// //     console.log(`[${ idx }]: ${ val }`);
+// // }
+//
+// for([idx, val] of loopTest3.entries()){
+//   console.log(idx, val);
+// }
+
+// function greeting(msg) {
+//     return function who(name) {
+//         console.log(`${ msg }, ${ name }!`);
+//     };
+// }
+//
+// var hello = greeting("Hello");
+// var howdy = greeting("Howdy");
+//
+// hello("Kyle");
+// // Hello, Kyle!
+//
+// hello("Sarah");
+// // Hello, Sarah!
+//
+// howdy("Grant");
+// Howdy, Grant!
+//
+//
+// let increment = (inc)=>{
+//   count = 0;
+//   while (count<10) {
+//     count = count + inc
+//     console.log(inc);
+//     count++;
+//   }
+// };
+
+function counter(step = 1) {
+    var count = 0;
+    return function increaseCount(){
+        count = count + step;
+        return count;
+    };
+}
+
+console.log(counter(3));
+
+
+var wilsonCreek = {
+  hydro: "Wilson",
+  road: "Pineola",
+  trail: "Darkside Cliffs",
+  height: ()=>{
+    console.log(wilsonCreek.trail);
+  }
+};
+
+wilsonCreek.height();
+//console.log(wilsonCreek.toString());
+
+
+
+var homework = {
+    study() {
+        console.log(`Please study ${ this.topic }`);
+    }
+};
+
+var jsHomework = Object.create(homework);
+jsHomework.topic = "JS";
+jsHomework.study();
+// Please study JS
+
+var mathHomework = Object.create(homework);
+mathHomework.topic = "Math";
+mathHomework.study();
+// Please study Math
+
+
+
+
+
+const dayStart = "07:30";
+const dayEnd = "17:45";
+
+function scheduleMeeting(startTime,durationMinutes) {
+    var [ , meetingStartHour, meetingStartMinutes ] =
+        startTime.match(/^(\d{1,2}):(\d{2})$/) || [];
+
+    durationMinutes = Number(durationMinutes);
+
+    if (
+        typeof meetingStartHour == "string" &&
+        typeof meetingStartMinutes == "string"
+    ) {
+        let durationHours =
+            Math.floor(durationMinutes / 60);
+        durationMinutes =
+            durationMinutes - (durationHours * 60);
+        let meetingEndHour =
+            Number(meetingStartHour) + durationHours;
+        let meetingEndMinutes =
+            Number(meetingStartMinutes) +
+            durationMinutes;
+
+        if (meetingEndMinutes >= 60) {
+            meetingEndHour = meetingEndHour + 1;
+            meetingEndMinutes =
+                meetingEndMinutes - 60;
+        }
+
+        // re-compose fully-qualified time strings
+        // (to make comparison easier)
+        let meetingStart = `${
+            meetingStartHour.padStart(2,"0")
+        }:${
+            meetingStartMinutes.padStart(2,"0")
+        }`;
+        let meetingEnd = `${
+            String(meetingEndHour).padStart(2,"0")
+        }:${
+            String(meetingEndMinutes).padStart(2,"0")
+        }`;
+
+        // NOTE: since expressions are all strings,
+        // comparisons here are alphabetic, but it's
+        // safe here since they're fully qualified
+        // time strings (ie, "07:15" < "07:30")
+        return (
+            meetingStart >= dayStart &&
+            meetingEnd <= dayEnd
+        );
+    }
+
+    return false;
+}
+
+scheduleMeeting("7:00",15);     // false
+scheduleMeeting("07:15",30);    // false
+scheduleMeeting("7:30",30);     // true
+scheduleMeeting("11:30",60);    // true
+scheduleMeeting("17:00",45);    // true
+scheduleMeeting("17:30",30);    // false
+scheduleMeeting("18:00",15);    // false
 
 
 
