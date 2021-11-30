@@ -174,7 +174,7 @@ let mountainRange = new Object();
 mountainRange.name = "Brushy Mountains";
 mountainRange.maxHeight = 2211;
 mountainRange.minHeight = 1800;
-mountainRange.elevation = () =>{
+mountainRange.elevation = () => {
   return mountainRange.maxHeight - mountainRange.minHeight
 };
 
@@ -195,19 +195,19 @@ mountainRange.elevation = () =>{
 // console.log(mtnRange[2]);
 
 let mountains = {
-  name(){
+  name() {
     console.log("Hibriten Mtn");
   },
-  height(){
+  height() {
     console.log(2211);
   }
 };
 
 console.log(mountains.name());
 
-let arr = [ "1", "10", "100", "1000" ];
+let arr = ["1", "10", "100", "1000"];
 for (let i = 0; i < arr.length && arr[i] < 500; i++) {
-    // will run 3 times
+  // will run 3 times
 };
 
 //
@@ -268,11 +268,11 @@ var mountainTops = [1850, 2011, 2211];
 //   console.log(val);
 // }
 
-for ([idx,val] of mountainTops.entries()){
+for ([idx, val] of mountainTops.entries()) {
   console.log(idx, val);
 }
 
-for (vl of mountainTops.values()){
+for (vl of mountainTops.values()) {
   console.log(vl);
 }
 
@@ -337,11 +337,11 @@ for (vl of mountainTops.values()){
 // };
 
 function counter(step = 1) {
-    var count = 0;
-    return function increaseCount(){
-        count = count + step;
-        return count;
-    };
+  var count = 0;
+  return function increaseCount() {
+    count = count + step;
+    return count;
+  };
 }
 
 console.log(counter(3));
@@ -351,7 +351,7 @@ var wilsonCreek = {
   hydro: "Wilson",
   road: "Pineola",
   trail: "Darkside Cliffs",
-  height: ()=>{
+  height: () => {
     console.log(wilsonCreek.trail);
   }
 };
@@ -359,90 +359,112 @@ var wilsonCreek = {
 wilsonCreek.height();
 //console.log(wilsonCreek.toString());
 
+//
+//
+// var homework = {
+//     study() {
+//         console.log(`Please study ${ this.topic }`);
+//     }
+// };
+//
+// var jsHomework = Object.create(homework);
+// jsHomework.topic = "JS";
+// jsHomework.study();
+// // Please study JS
+//
+// var mathHomework = Object.create(homework);
+// mathHomework.topic = "Math";
+// mathHomework.study();
+// // Please study Math
 
 
-var homework = {
-    study() {
-        console.log(`Please study ${ this.topic }`);
-    }
+
+//
+//
+// const dayStart = "07:30";
+// const dayEnd = "17:45";
+//
+// function scheduleMeeting(startTime,durationMinutes) {
+//     var [ , meetingStartHour, meetingStartMinutes ] =
+//         startTime.match(/^(\d{1,2}):(\d{2})$/) || [];
+//
+//     durationMinutes = Number(durationMinutes);
+//
+//     if (
+//         typeof meetingStartHour == "string" &&
+//         typeof meetingStartMinutes == "string"
+//     ) {
+//         let durationHours =
+//             Math.floor(durationMinutes / 60);
+//         durationMinutes =
+//             durationMinutes - (durationHours * 60);
+//         let meetingEndHour =
+//             Number(meetingStartHour) + durationHours;
+//         let meetingEndMinutes =
+//             Number(meetingStartMinutes) +
+//             durationMinutes;
+//
+//         if (meetingEndMinutes >= 60) {
+//             meetingEndHour = meetingEndHour + 1;
+//             meetingEndMinutes =
+//                 meetingEndMinutes - 60;
+//         }
+//
+//         // re-compose fully-qualified time strings
+//         // (to make comparison easier)
+//         let meetingStart = `${
+//             meetingStartHour.padStart(2,"0")
+//         }:${
+//             meetingStartMinutes.padStart(2,"0")
+//         }`;
+//         let meetingEnd = `${
+//             String(meetingEndHour).padStart(2,"0")
+//         }:${
+//             String(meetingEndMinutes).padStart(2,"0")
+//         }`;
+//
+//         // NOTE: since expressions are all strings,
+//         // comparisons here are alphabetic, but it's
+//         // safe here since they're fully qualified
+//         // time strings (ie, "07:15" < "07:30")
+//         return (
+//             meetingStart >= dayStart &&
+//             meetingEnd <= dayEnd
+//         );
+//     }
+//
+//     return false;
+// }
+//
+// scheduleMeeting("7:00",15);     // false
+// scheduleMeeting("07:15",30);    // false
+// scheduleMeeting("7:30",30);     // true
+// scheduleMeeting("11:30",60);    // true
+// scheduleMeeting("17:00",45);    // true
+// scheduleMeeting("17:30",30);    // false
+// scheduleMeeting("18:00",15);    // false
+//
+//
+// var today = new Date();
+// var day = today.getDate();
+// let content = document.getElementById("test").textContent = day;
+// //content.textContent = day;
+
+counter = 0;
+
+let iterateFrom = (param) => {
+  while (counter < 10) {
+    counter = counter + param;
+    console.log(counter);
+    //param += counter;
+  };
+
+
 };
 
-var jsHomework = Object.create(homework);
-jsHomework.topic = "JS";
-jsHomework.study();
-// Please study JS
-
-var mathHomework = Object.create(homework);
-mathHomework.topic = "Math";
-mathHomework.study();
-// Please study Math
+iterateFrom(4);
 
 
-
-
-
-const dayStart = "07:30";
-const dayEnd = "17:45";
-
-function scheduleMeeting(startTime,durationMinutes) {
-    var [ , meetingStartHour, meetingStartMinutes ] =
-        startTime.match(/^(\d{1,2}):(\d{2})$/) || [];
-
-    durationMinutes = Number(durationMinutes);
-
-    if (
-        typeof meetingStartHour == "string" &&
-        typeof meetingStartMinutes == "string"
-    ) {
-        let durationHours =
-            Math.floor(durationMinutes / 60);
-        durationMinutes =
-            durationMinutes - (durationHours * 60);
-        let meetingEndHour =
-            Number(meetingStartHour) + durationHours;
-        let meetingEndMinutes =
-            Number(meetingStartMinutes) +
-            durationMinutes;
-
-        if (meetingEndMinutes >= 60) {
-            meetingEndHour = meetingEndHour + 1;
-            meetingEndMinutes =
-                meetingEndMinutes - 60;
-        }
-
-        // re-compose fully-qualified time strings
-        // (to make comparison easier)
-        let meetingStart = `${
-            meetingStartHour.padStart(2,"0")
-        }:${
-            meetingStartMinutes.padStart(2,"0")
-        }`;
-        let meetingEnd = `${
-            String(meetingEndHour).padStart(2,"0")
-        }:${
-            String(meetingEndMinutes).padStart(2,"0")
-        }`;
-
-        // NOTE: since expressions are all strings,
-        // comparisons here are alphabetic, but it's
-        // safe here since they're fully qualified
-        // time strings (ie, "07:15" < "07:30")
-        return (
-            meetingStart >= dayStart &&
-            meetingEnd <= dayEnd
-        );
-    }
-
-    return false;
-}
-
-scheduleMeeting("7:00",15);     // false
-scheduleMeeting("07:15",30);    // false
-scheduleMeeting("7:30",30);     // true
-scheduleMeeting("11:30",60);    // true
-scheduleMeeting("17:00",45);    // true
-scheduleMeeting("17:30",30);    // false
-scheduleMeeting("18:00",15);    // false
 
 
 
