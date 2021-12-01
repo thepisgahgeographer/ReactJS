@@ -260,24 +260,24 @@ for (let i = 0; i < arr.length && arr[i] < 500; i++) {
 //             ${ this.pubDate }
 //         `);
 //     }
+// // }
+//
+// var mountainTops = [1850, 2011, 2211];
+//
+// // for (val of mountainTops){
+// //   console.log(val);
+// // }
+//
+// for ([idx, val] of mountainTops.entries()) {
+//   console.log(idx, val);
 // }
-
-var mountainTops = [1850, 2011, 2211];
-
-// for (val of mountainTops){
-//   console.log(val);
+//
+// for (vl of mountainTops.values()) {
+//   console.log(vl);
 // }
-
-for ([idx, val] of mountainTops.entries()) {
-  console.log(idx, val);
-}
-
-for (vl of mountainTops.values()) {
-  console.log(vl);
-}
-
-
-// let mountainTopsTest = [...mountainTops];
+//
+//
+// // let mountainTopsTest = [...mountainTops];
 // console.log(mountainTopsTest);
 //
 // let loopTest1 = "Brushy Mountains";
@@ -334,32 +334,32 @@ for (vl of mountainTops.values()) {
 //     console.log(inc);
 //     count++;
 //   }
-// };
-
-function counter(step = 1) {
-  var count = 0;
-  return function increaseCount() {
-    count = count + step;
-    return count;
-  };
-}
-
-console.log(counter(3));
-
-
-var wilsonCreek = {
-  hydro: "Wilson",
-  road: "Pineola",
-  trail: "Darkside Cliffs",
-  height: () => {
-    console.log(wilsonCreek.trail);
-  }
-};
-
-wilsonCreek.height();
-//console.log(wilsonCreek.toString());
-
+// // };
 //
+// function counter(step = 1) {
+//   var count = 0;
+//   return function increaseCount() {
+//     count = count + step;
+//     return count;
+//   };
+// }
+//
+// console.log(counter(3));
+//
+//
+// var wilsonCreek = {
+//   hydro: "Wilson",
+//   road: "Pineola",
+//   trail: "Darkside Cliffs",
+//   height: () => {
+//     console.log(wilsonCreek.trail);
+//   }
+// };
+//
+// wilsonCreek.height();
+// //console.log(wilsonCreek.toString());
+//
+// //
 //
 // var homework = {
 //     study() {
@@ -464,8 +464,20 @@ let iterateFrom = (param) => {
 
 iterateFrom(4);
 
+let brushyMtn = {
+  Height: 2211,
+  Peak: "Hibriten",
+  Towers: true
+};
 
 
+for (val in brushyMtn){
+  console.log(Object.values(val));
+}
+
+// for (val in brushyMtn){
+//   console.log(Object.entries(val));
+// }
 
 
 
