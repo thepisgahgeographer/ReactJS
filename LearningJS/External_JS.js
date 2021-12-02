@@ -449,6 +449,40 @@ for (let i = 0; i < arr.length && arr[i] < 500; i++) {
 // var day = today.getDate();
 // let content = document.getElementById("test").textContent = day;
 // //content.textContent = day;
+//
+// var students = [{
+//     id: 14,
+//     name: "Kyle"
+//   },
+//   {
+//     id: 73,
+//     name: "Suzy"
+//   },
+//   {
+//     id: 112,
+//     name: "Frank"
+//   },
+//   {
+//     id: 6,
+//     name: "Sarah"
+//   }
+// ];
+//
+// function getStudentName(studentID) {
+//   for (let student of students) {
+//     if (student.id == studentID) {
+//       return student.name;
+//     }
+//   }
+// }
+//
+// var nextStudent = getStudentName(73);
+//
+// console.log(nextStudent);
+// // Suzy
+//
+
+
 
 counter = 0;
 
@@ -471,7 +505,7 @@ let brushyMtn = {
 };
 
 
-for (val in brushyMtn){
+for (val in brushyMtn) {
   console.log(Object.values(val));
 }
 
@@ -479,6 +513,19 @@ for (val in brushyMtn){
 //   console.log(Object.entries(val));
 // }
 
+let str = "Hibriten Mountain";
+let ary = [];
+
+let test = str.includes("a");
+
+for (val in str) {
+  if (test == true) {
+    ary.push(val);
+  }
+};
+
+
+console.log(ary);
 
 
 
