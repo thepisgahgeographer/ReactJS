@@ -525,7 +525,24 @@ for (val in str) {
 };
 
 
-console.log(ary);
+// console.log(ary);
+
+let streams = {
+  Harper: 45,
+  Lost_Cove: 40,
+  Wilson: 50
+};
+
+if (streams["Harper"] == 40) {
+  console.log("Value Found");
+} else {
+  console.log("Value Not Present");
+}
+
+
+
+
+
 
 
 
