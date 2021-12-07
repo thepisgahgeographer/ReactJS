@@ -539,6 +539,14 @@ if (streams["Harper"] == 40) {
   console.log("Value Not Present");
 }
 
+let check = (param) => {
+  if (param >= 80 && param <= 120) {
+    console.log(`${param} is ~ 100`);
+  }
+};
+
+check(89);
+
 
 
 
