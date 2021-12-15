@@ -548,10 +548,34 @@ let check = (param) => {
 check(89);
 
 
+let brushiesPeak = [{
+    Name: "Hibriten",
+    Height: 2211
+  },
+  {
+    Name: "Hen",
+    Height: 1925
+  },
+  {
+    Name: "Timbered Ridge",
+    Height: 1756
+  }
+];
+
+const mountainPeak = (param) => {
+  for (let peak of brushiesPeak) {
+    if (peak.Name == param) {
+      console.log(peak.Height);
+    }
+  }
+};
+
+
+mountainPeak("Hibriten");
 
 
 
 
 
 
-//X
+// X
