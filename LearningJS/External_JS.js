@@ -570,12 +570,39 @@ const mountainPeak = (param) => {
   }
 };
 
-
 mountainPeak("Hibriten");
 
 
 
+var students = [
+    { id: 14, name: "Kyle" },
+    { id: 73, name: "Suzy" },
+    { id: 112, name: "Frank" },
+    { id: 6, name: "Sarah" }
+];
 
+function getStudentName(studentID) {
+    for (let student of students) {
+        if (student.id == studentID) {
+            return student.name;
+        }
+    }
+}
 
+var nextStudent = getStudentName(73);
+
+// console.log(students.id=14);
+
+let text = "Brushy Mountains";
+let n = text.search("Mountains");
+console.log(n);
+
+// let text = "Visit W3Schools!";
+// let n = text.search("W3Schools");
+// console.log(n);
+//
+// let tt = 2 + "2";
+// console.log(typeof tt);
+//
 
 // X
