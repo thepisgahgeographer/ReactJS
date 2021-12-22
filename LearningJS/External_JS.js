@@ -574,19 +574,30 @@ mountainPeak("Hibriten");
 
 
 
-var students = [
-    { id: 14, name: "Kyle" },
-    { id: 73, name: "Suzy" },
-    { id: 112, name: "Frank" },
-    { id: 6, name: "Sarah" }
+var students = [{
+    id: 14,
+    name: "Kyle"
+  },
+  {
+    id: 73,
+    name: "Suzy"
+  },
+  {
+    id: 112,
+    name: "Frank"
+  },
+  {
+    id: 6,
+    name: "Sarah"
+  }
 ];
 
 function getStudentName(studentID) {
-    for (let student of students) {
-        if (student.id == studentID) {
-            return student.name;
-        }
+  for (let student of students) {
+    if (student.id == studentID) {
+      return student.name;
     }
+  }
 }
 
 var nextStudent = getStudentName(73);
@@ -595,7 +606,36 @@ var nextStudent = getStudentName(73);
 
 let text = "Brushy Mountains";
 let n = text.search("Mountains");
-console.log(n);
+// console.log(n);
+//
+// let re1 = new RegExp("brushy");
+// console.log(re1);
+
+let arry = ["True", "False", "True"];
+
+counter = 0;
+arry.forEach((val) => {
+  if (val == "True") {
+    counter++;
+    console.log(counter);
+  }
+});
+
+
+
+
+
+// testVal();
+//
+// let tst1 = new RegExp("abc");
+// // console.log(tst1.test("abc"));
+// console.log(tst1.exec("abc"));
+//
+// let tst2 = new RegExp("^Hi");
+// console.log(tst2.test("Hibriten"));
+//
+
+
 
 // let text = "Visit W3Schools!";
 // let n = text.search("W3Schools");
