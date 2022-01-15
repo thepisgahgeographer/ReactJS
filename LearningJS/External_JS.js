@@ -622,7 +622,19 @@ arry.forEach((val) => {
 });
 
 
+// console.log("This is the first line\nAnd this is the second");
+// console.log("A newline character is written like \"\\n\".");
+let testing1 = {};
 
+// console.log(typeof testing1);
+// console.log(1 + 1 == 2 && 10 * 10 > 50);
+
+console.log((1>2) ? 0: 1);
+let dummyVal = null;
+
+if (!Number.isNaN(dummyVal)){
+  console.log("False");
+}
 
 
 // testVal();
