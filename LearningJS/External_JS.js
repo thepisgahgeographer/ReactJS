@@ -660,7 +660,7 @@
 // console.log(Math.max(10,5));
 
 let theNumber = "True";
-if(Number.isNaN(theNumber)){
+if (Number.isNaN(theNumber)) {
   console.log("True");
 }
 
@@ -678,6 +678,27 @@ while (counter < 10) {
 }
 
 console.log(result);
+
+let i = 0;
+while (i < 11) {
+  console.log(i);
+  i++;
+}
+
+
+let mtns = new Object;
+mtns.Height = 2230;
+mtns.Name = "Hibriten";
+mtns.func = () => {
+  for (let [key, val] of Object.entries(mtns)) {
+    console.log(key,val);
+  }
+}
+//console.log(mtns);
+mtns.func();
+
+
+let ary = [2230, 1850, 1600];
 
 
 
