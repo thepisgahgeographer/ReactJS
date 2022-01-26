@@ -7,3 +7,8 @@ button {
 }
 </style>
 <button id="button">This will use the CSS color tomato <slot></slot></button>`;
+
+
+const template = document.querySelector('template');
+const node = document.importNode(template.content, true);
+document.body.appendChild(node);
