@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+
+  <div>
+    <div id="example">
+      <!-- Pseudo-code used to designate a shadow root -->
+      <shadow-root>
+        <style>
+          button {
+            background: tomato;
+            color: white;
+          }
+        </style>
+        <button id="button">This will use the CSS background tomato</button>
+      </shadow-root>
+    </div>
+    <button id="button">Not tomato</button>
+  </div>
+
+
+  <script type="text/javascript">
+    const shadowRoot = document.getElementById('example').attachShadow({
+      mode: 'open'
+    });
+    shadowRoot.innerHTML = `<style>
+  button {
+    color: tomato;
+  }
+  </style>
+  <button id="button">This will use the CSS color tomato <slot></slot></button>`;
+  </script>
+
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+
+</html>
