@@ -691,7 +691,7 @@ mtns.Height = 2230;
 mtns.Name = "Hibriten";
 mtns.func = () => {
   for (let [key, val] of Object.entries(mtns)) {
-    console.log(key,val);
+    console.log(key, val);
   }
 }
 //console.log(mtns);
@@ -699,6 +699,20 @@ mtns.func();
 
 
 let ary = [2230, 1850, 1600];
+ary.forEach(element=> console.log(element));
+
+
+
+for (let i = 0; i <= 50; i++) {
+  if (i % 3 == 0) {
+    console.log(i, "Fizz");
+  }
+  else if (i % 5 == 0) {
+      console.log(i, "Buzz");
+
+    }
+  }
+
 
 
 
